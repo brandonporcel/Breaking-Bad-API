@@ -23,12 +23,10 @@ body {
 	background-repeat: no-repeat;
 	background-position: left 200px top;
 	background-color: var(--principal-color);
+	overflow-x: hidden;
 }
-.container {
-	padding: 50px;
-}
-/* placeholder backgeound ---------------------------------------------------------------*/
 
+/* placeholder backgeound ---------------------------------------------------------------*/
 .placeholder {
 	position: fixed;
 	left: 0;
@@ -43,7 +41,7 @@ body {
 	justify-content: center;
 	display: flex;
 	align-items: center;
-	z-index: 1;
+	z-index: 11;
 	white-space: nowrap;
 	position: absolute;
 	left: 0;
@@ -53,6 +51,41 @@ body {
 	user-select: none;
 	margin: 0;
 }
+/* aside left */
+.navigation {
+	writing-mode: vertical-lr;
+	margin-left: 20px;
+	display: flex;
+	justify-content: center;
+}
+.navigation-name {
+	margin-top: 30px;
+}
+.dot {
+	width: 10px;
+	height: 10px;
+	background: black;
+	border-radius: 50%;
+	display: inline-flex;
+}
+.line {
+	width: 2px;
+	height: 150px;
+	background: black;
+	display: inline-flex;
+}
+.navigation-text {
+	transform: rotate(180deg);
+	display: inline-flex;
+	margin-top: 15px;
+}
+/* CONTAINER ---------------------------------------------------------------*/
+.container {
+	padding: 50px;
+	position: relative;
+	z-index: 22;
+	height: 100vh;
+}
 /* HEADER--------------------------------------------------------------- */
 .header {
 	/* background-color: blue; */
@@ -60,7 +93,6 @@ body {
 	justify-content: flex-end;
 	align-items: center;
 }
-
 .header-logo {
 	width: 100px;
 	margin: 0 auto;
@@ -75,9 +107,15 @@ body {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	margin-top: 80px;
 }
 .character-labels-container {
 	width: 30%;
+}
+.character-name {
+	font-weight: 900;
+	font-size: 34px;
+	white-space: nowrap;
 }
 .character-name-arrows-container {
 	display: flex;
@@ -91,13 +129,13 @@ body {
 	color: var(--white-color);
 	border-radius: 10px;
 	text-align: left;
-	font-size: 25px;
+	font-size: 20px;
 	font-weight: 400;
 	width: 100%;
 }
 .character-image {
-	width: 300px;
-	height: 300px;
+	width: 200px;
+	height: 200px;
 	border-radius: 50%;
 }
 /* footer---------------------------------------------------------------*/
