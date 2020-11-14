@@ -8,8 +8,12 @@ html {
 	box-sizing: inherit;
 }
 :root {
-	--color: red;
-	--principal: #ffa500;
+	--principal-color: #8db596;
+	/* parner-color #685128, #92817A */
+	--partner-color: #707070;
+	--contrast-color: #ffa500;
+	--white-color: #fff;
+	--black-color: #000;
 }
 body {
 	margin: 0;
@@ -17,11 +21,11 @@ body {
 	background-image: url('../img/semicircle.svg');
 	background-repeat: no-repeat;
 	background-position: left 200px top;
-	background-color: var(--color);
+	background-color: var(--principal-color);
 }
 .container {
 	padding: 50px;
-	background-color: rgba(0, 255, 255, 0.371);
+	background-color: rgba(0, 255, 255, 0.089);
 }
 /* HEADER--------------------------------------------------------------- */
 .header {
@@ -39,4 +43,36 @@ body {
 .header-square {
 	width: 43px;
 	height: 43px;
+}
+/* main ---------------------------------------------------------------*/
+.info-container {
+	background-color: red;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.character-labels-container {
+	background-color: blue;
+	width: 30%;
+}
+.character-name-arrows-container {
+	display: flex;
+}
+.arrow-img {
+	width: 43px;
+}
+.character-label {
+	background: var(--partner-color);
+	padding: 1rem;
+	color: var(--white-color);
+	border-radius: 10px;
+	text-align: left;
+	font-size: 25px;
+	font-weight: 400;
+	width: 100%;
+}
+.character-image {
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
 }
