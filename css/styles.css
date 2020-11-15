@@ -128,11 +128,14 @@ body {
 .character-name-arrows-container {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+	width: 70%;
 }
 .arrow-img {
 	width: 43px;
 	height: 43px;
 	cursor: pointer;
+	border: 1px solid;
 }
 .character-label {
 	background: var(--partner-color);
@@ -172,5 +175,6 @@ body {
 	}
 	.character-name-arrows-container {
 		justify-content: center;
+		width: 100%;
 	}
 }
