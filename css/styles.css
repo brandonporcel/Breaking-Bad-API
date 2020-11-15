@@ -148,10 +148,29 @@ body {
 	font-weight: 400;
 	width: 70%;
 }
-.character-image {
-	width: 200px;
+.character-image-container {
 	height: 200px;
+	width: 200px;
+	position: relative;
+}
+.character-image-container::after {
+	content: '';
+	display: block;
+	height: 15px;
 	border-radius: 50%;
+	width: 250px;
+	background-color: rgba(0, 0, 0, 0.3);
+	position: absolute;
+	bottom: -20px;
+	left: -25px;
+}
+.character-image {
+	border-radius: 50%;
+	height: inherit;
+	width: inherit;
+	position: absolute;
+	object-fit: cover;
+	object-position: 50% 0;
 }
 /* footer---------------------------------------------------------------*/
 .footer {
@@ -180,5 +199,8 @@ body {
 	.character-name-arrows-container {
 		justify-content: center;
 		width: 100%;
+	}
+	.character-image-container::after {
+		display: none;
 	}
 }
