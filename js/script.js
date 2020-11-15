@@ -2,24 +2,27 @@ const d = document;
 const $nextBtn = d.getElementById('next-btn');
 const $prevBtn = d.getElementById('next-btn');
 const cuurentCharacter = 6;
-const drawImage = (dataJsonn) => {
+const drawChacterInfo = (dataJsonn) => {
 	const data = dataJsonn[0];
 	d.getElementById('character-image').src = data.img;
+	d.getElementById('character-name').innerHTML = data.name;
+	d.getElementById('placheholder-character-name').innerHTML = data.name;
+	d.getElementById(
+		'character-label-portrayed'
+	).innerHTML = `Portrayed: ${data.portrayed}`;
+	d.getElementById(
+		'character-label-occupation'
+	).innerHTML = `Portrayed: ${data.occupation}`;
+	d.getElementById(
+		'character-label-status'
+	).innerHTML = `Status: ${data.status}`;
+	console.log(data);
 };
-const drawName = (dataJsonn) => {
-	d.getElementById('character-name').innerHTML = dataJsonn[0].name;
-};
-const drawPlaceholderName = (dataJsonn) => {
-	d.getElementById('placheholder-character-name').innerHTML = dataJsonn[0].name;
-};
-
 const fetchAPI = async (idCharacter) => {
 	const URL = 'https://breakingbadapi.com/api/characters';
 	const respuesta = await fetch(`${URL}/${idCharacter}`);
 	const answerJson = await respuesta.json();
-	drawImage(answerJson);
-	drawName(answerJson);
-	drawPlaceholderName(answerJson);
+	drawChacterInfo(answerJson);
 };
 d.addEventListener('DOMContentLoaded', () => {
 	fetchAPI(cuurentCharacter);
