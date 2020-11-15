@@ -136,13 +136,13 @@ body {
 }
 .character-label {
 	background: var(--partner-color);
-	padding: 1rem;
+	padding: 20px;
 	color: var(--white-color);
 	border-radius: 10px;
 	text-align: left;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 400;
-	width: 100%;
+	width: 70%;
 }
 .character-image {
 	width: 200px;
@@ -159,6 +159,9 @@ body {
 	}
 	.info-container {
 		flex-direction: column;
+	}
+	.character-label {
+		width: 100%;
 	}
 	.character-image-container {
 		order: 0;
