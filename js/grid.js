@@ -8,7 +8,7 @@ const drawCards = (dataFromJson) => {
 		elementos += `
         <article class="card">
 					<div class="card-img-container">
-						<img class="card-img img-fluid" src="${el.img}" alt="" />
+						<img class="card-img img-fluid" src="${el.img}" alt="${el.name}" />
 					</div>
 					<div class="card-content">
 						<h3 class="character-name">${el.name}</h3>
