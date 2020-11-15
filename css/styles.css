@@ -10,8 +10,8 @@ html {
 :root {
 	/* principal #00ffff17 */
 	--principal-color: #8db596;
-	/* parner-color #685128, #92817A */
-	--partner-color: #707070;
+	/* parner-color #685128, #92817A, #707070 */
+	--partner-color: #685128;
 	--contrast-color: #ffa500;
 	--white-color: #fff;
 	--black-color: #000;
@@ -54,12 +54,13 @@ body {
 /* aside left */
 .navigation {
 	writing-mode: vertical-lr;
-	margin-left: 20px;
+	margin-left: 75px;
 	display: flex;
 	justify-content: center;
 }
 .navigation-name {
-	margin-top: 30px;
+	position: absolute;
+	top: 30px;
 }
 .dot {
 	width: 10px;
@@ -75,9 +76,19 @@ body {
 	display: inline-flex;
 }
 .navigation-text {
-	transform: rotate(180deg);
 	display: inline-flex;
+	text-transform: uppercase;
+	transform: rotate(180deg);
+}
+.navigation-text-name {
 	margin-top: 15px;
+}
+.navigation-text-about {
+	margin-bottom: 15px;
+}
+.navigation-about {
+	bottom: 40px;
+	position: absolute;
 }
 /* CONTAINER ---------------------------------------------------------------*/
 .container {
@@ -94,7 +105,7 @@ body {
 	align-items: center;
 }
 .header-logo {
-	width: 100px;
+	width: 150px;
 	margin: 0 auto;
 	display: block;
 }
@@ -107,10 +118,10 @@ body {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	margin-top: 80px;
+	margin-top: 50px;
 }
 .character-labels-container {
-	width: 30%;
+	width: 50%;
 }
 .character-name {
 	font-weight: 900;
@@ -132,6 +143,7 @@ body {
 	font-size: 20px;
 	font-weight: 400;
 	width: 100%;
+	box-shadow: 1px 1px 5px var(--contrast-color);
 }
 .character-image {
 	width: 200px;
@@ -141,4 +153,22 @@ body {
 /* footer---------------------------------------------------------------*/
 .footer {
 	text-align: center;
+}
+@media screen and (max-width: 900px) {
+	.navigation {
+		display: none;
+	}
+	.info-container {
+		flex-direction: column;
+	}
+	.character-image-container {
+		order: 0;
+	}
+	.character-labels-container {
+		order: 1;
+		width: 100%;
+	}
+	.character-name-arrows-container {
+		justify-content: center;
+	}
 }
