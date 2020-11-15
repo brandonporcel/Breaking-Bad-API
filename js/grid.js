@@ -43,6 +43,21 @@ const userForm = (dataFromJson) => {
 		drawCards(filteredCharacterArray);
 	});
 };
+const filterByStatus = (dataFromJson) => {
+	const $select = d.getElementById('filter-select');
+	$select.addEventListener('change', () => {
+		const optionValue = $select.value.toLowerCase();
+		console.log(dataFromJson);
+		if (optionValue === '') {
+			drawCards(dataFromJson);
+		} else {
+			const filteredCharacterArray = dataFromJson.filter(
+				(item) => item.status.toLowerCase() === optionValue
+			);
+			drawCards(filteredCharacterArray);
+		}
+	});
+};
 const fetchAPI = async () => {
 	try {
 		const URL = 'https://breakingbadapi.com/api/characters/';
@@ -50,6 +65,7 @@ const fetchAPI = async () => {
 		const answerJson = await answer.json();
 		drawCards(answerJson);
 		userForm(answerJson);
+		filterByStatus(answerJson);
 	} catch (err) {
 		console.log(err);
 	}
