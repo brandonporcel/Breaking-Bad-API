@@ -13,15 +13,15 @@ const drawCards = (dataFromJson) => {
 					<div class="card-content">
 						<h3 class="character-name">${el.name}</h3>
 						<p>
-							<b>Portrayed: </b>
+							<b class="character-label">Portrayed: </b>
 							${el.portrayed}
 						</p>
 						<p>
-							<b>Occupation: </b>
+							<b class="character-label">Occupation: </b>
 							${el.occupation}
 						</p>
 						<p>
-							<b>Status: </b>
+							<b class="character-label">Status: </b>
 							${el.status}
 						</p>
 					</div>
