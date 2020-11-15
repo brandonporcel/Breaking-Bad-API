@@ -12,7 +12,7 @@ const drawChacterInfo = (dataJsonn) => {
 	).innerHTML = `Portrayed: ${data.portrayed}`;
 	d.getElementById(
 		'character-label-occupation'
-	).innerHTML = `Portrayed: ${data.occupation}`;
+	).innerHTML = `Occupation: ${data.occupation}`;
 	d.getElementById(
 		'character-label-status'
 	).innerHTML = `Status: ${data.status}`;

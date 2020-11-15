@@ -103,6 +103,7 @@ body {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	padding: 0 100px;
 }
 .header-logo {
 	width: 150px;
@@ -159,6 +160,9 @@ body {
 @media screen and (max-width: 900px) {
 	.navigation {
 		display: none;
+	}
+	.header {
+		justify-content: center;
 	}
 	.info-container {
 		flex-direction: column;

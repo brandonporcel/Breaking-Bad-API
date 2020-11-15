@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Breaking Bad API</title>
+		<link rel="stylesheet" href="../css/grid.css" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<div>
+					<a
+						href="https://github.com/brandonporcel"
+						target="_blank"
+						rel="noopener"
+					>
+						<img class="small-svg" src="../img/github.svg" alt="" />
+					</a>
+					<a
+						href="https://instagram.com/brandonporcel"
+						target="_blank"
+						rel="noopener"
+					>
+						<img class="small-svg" src="../img/instagram.svg" alt="" />
+					</a>
+				</div>
+				<img class="header-logo" src="../img/logo.png" alt="" />
+				<a href="../index.html">
+					<img class="small-svg" src="../img/square.svg" alt="" />
+				</a>
+			</header>
+			<nav class="filter-nav">
+				<form class="form" id="form">
+					<input
+						id="form-input"
+						class="form-input"
+						type="search"
+						placeholder="Search for a country"
+					/>
+				</form>
+				<select class="form" id="filtroSelect">
+					<option value="">Filter by Status</option>
+					<option value="Everything">Everything</option>
+					<option value="alive">Alive</option>
+					<option value="deceased">Deceased</option>
+					<option value="Unknow">Unknow</option>
+					<option value="Presumed Dead">Presumed Dead</option>
+				</select>
+			</nav>
+			<main id="main" class="main"></main>
+		</div>
+		<script src="../js/grid.js"></script>
+	</body>
+</html>
